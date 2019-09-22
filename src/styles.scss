@@ -1,1 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+* {
+    font-family: 'Titillium Web', sans-serif;
+    color: #666666;
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+button:focus {
+    outline: none;
+}
+
+.mat-stroked-button {
+    border-width: 2px !important;
+    border-radius: 100px !important;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+
+    .mat-button-wrapper {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: bold;
+    }
+}

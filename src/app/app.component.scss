@@ -1,0 +1,229 @@
+mat-toolbar {
+    background-color: white;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+
+    .mat-toolbar-content {
+        width: 75%;
+    }
+
+    .toolbar-logo-link {
+        img {
+            width: 80px;
+        }
+    }
+
+    .toolbar-pages-links {
+        font-size: 16px;
+        font-weight: bold;
+
+        .toolbar-page-link {
+            text-decoration: none;
+            color: inherit;
+            margin-right: 64px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .toolbar-menu-pages-links {
+        button {
+            margin-right: 16px;
+        }
+    }
+}
+
+:host .mat-menu-content { // for the whole toolbar menu content
+    padding: 0 !important;
+}
+
+::ng-deep .mat-menu-item { // for a toolbar menu item
+    color: #666666 !important;
+    font-family: 'Titillium Web', sans-serif !important;
+    font-size: 16px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+}
+
+::ng-deep .mat-button-wrapper { // for the toolbar menu button (to center the icon inside of it)
+    display: inline-flex !important;
+    vertical-align: middle !important;
+}
+
+.page {
+    padding: 0;
+    margin: 64px 0 0;
+}
+
+.page-section {
+    width: 75%;
+    padding-top: 80px;
+}
+
+.title-1 {
+    font-size: 48px;
+}
+
+.title-2 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px;
+}
+
+.title-3 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    margin-top: 8px;
+}
+
+.title-4 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 28px;
+    color: inherit;
+}
+
+.title-5 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 24px;
+    margin-top: 8px;
+    color: inherit;
+}
+
+.text-1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 24px;
+    color: inherit;
+}
+
+.text-2 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 14px;
+}
+
+.divider-line {
+    border-bottom-width: 2px;
+    border-bottom-style: solid;
+    width: 10%;
+    margin-bottom: 12px;
+    margin-top: 8px;
+}
+
+.footer {
+    padding: 12px 0;
+    margin-top: 80px;
+    background: #ededed;
+
+    mat-icon {
+        margin-right: 8px;
+        font-size: 20px;
+        height: 20px;
+        width: 20px;
+    }
+
+    .divider-line {
+        border-color: #666666;
+        width: 3%;
+        margin-top: 16px;
+    }
+
+    svg {
+        width: 24px;
+        height: 24px;
+        transform: scale(0.833333);
+
+        path {
+            fill: #666666;
+        }
+    }
+}
+
+.footer > div {
+    width: 75%;
+}
+
+// lt-lg <=> md || sm || xs (for anything smaller than a desktop <=> fpr tablet, phablets or phones)
+@media screen and (max-width: 1279px) {
+    mat-toolbar {
+        .mat-toolbar-content {
+            width: 90%;
+        }
+    }
+
+    .page-section {
+        width: 90%;
+    }
+
+    .footer > div {
+        width: 90%;
+    }
+}
+
+// lt-md <=> sm || xs (for anything smaller than a tablet <=> for phablets and phones)
+@media screen and (max-width: 959px) {
+    mat-toolbar {
+        .mat-toolbar-content {
+            width: 100%;
+        }
+
+        .toolbar-logo-link {
+            margin-left: 16px;
+        }
+    }
+
+    .page-section {
+        width: 100%;
+        padding-top: 64px;
+    }
+
+    .page-section-50-column {
+        margin-top: 56px;
+    }
+
+    .footer > div {
+        width: 100%;
+    }
+}
+
+// lt-sm <=> xs (for phones)
+@media screen and (max-width: 599px) {
+    .page {
+        margin: 56px 0 0;
+    }
+
+    .page-section {
+        padding-top: 32px;
+    }
+
+    .page-section-50-column {
+        margin-top: 48px;
+    }
+
+    .title-1 {
+        font-size: 24px;
+    }
+
+    .title-2 {
+        font-size: 14px;
+    }
+
+    .title-3 {
+        font-size: 12px;
+        margin-top: 6px;
+    }
+
+    .title-4 {
+        font-size: 18px;
+    }
+
+    .title-5 {
+        font-size: 14px;
+        margin-top: 6px;
+    }
+}
